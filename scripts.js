@@ -75,12 +75,12 @@ var id = tabNumeros.indexOf(val);
 	    		 for(var i=0; i<tabNumeros.length; i++){
 	    		 	if(env === tabNumeros[i]){
 	    		 		cpt = tabComptes[idx] - senv;
+	    		 		var senV = tabComptes[idx] - cpt;
 	    		 		tabComptes[idx] = cpt;
 	    		 		flag = i;
 	    		 	}	
 	    		 }
 	    		 if(flag != -1){
-	    		 	var senV = tabComptes[idx] - cpt;
 	    		 		sld = tabComptes[flag] + senV;
  						tabComptes[flag] = sld;
 
