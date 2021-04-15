@@ -1,10 +1,10 @@
-
+var cpt, sld, flag;
 
 var tabNumeros = ["771234567", "761234567", "701234567", "781234567", "777654321"];
 
-var tabComptes = [10000, 20000, 15000, 33000, 55000];
+var tabComptes = [12000, 18000, 15000, 33000, 55000];
 
-var tabCodes = [1111, 0000, 0110, 1234, 5555];
+var tabCodes = [1111, 0000, 1110, 1234, 5555];
 
 
     function getValue() {
@@ -43,7 +43,7 @@ function afficherSolde(){
 }
 
 function mobilMoney(){
-			var select = document.getElementById('num');
+	    var select = document.getElementById('num');
             var idx = select.selectedIndex;
             var val = select.options[idx].value;
             var content = select.options[idx].innerHTML;
@@ -65,9 +65,25 @@ var id = tabNumeros.indexOf(val);
  			var senv = prompt("Le montant à envoyé");
  		}
  		if(!isNaN(senv)){
- 			solde = solde - senv;
- 			alert('Votre transfert a bien été envoyé.\nAu revoir, cher(e) client!');
+ 			var numE = document.getElementById('num').value;
+    		transfert(numE, env);
  		}
+ 		function transfert(numE, env){
+	    		var idx = select.selectedIndex;
+	    		 cpt = tabComptes[idx] - senv;
+
+	    		 for(var i=0; i<tabNumeros.length; i++){
+	    		 	if(env === tabNumeros[i]){
+	    		 		flag = i;
+	    		 		sld = tabComptes[flag] + senv;alert(sld);
+	    		alert('Votre transfert a bien été envoyé.\nAu revoir, cher(e) client!');
+    		
+	    		 	}
+	    		 }
+	    		 
+	tabComptes[idx] = cpt;
+ 	tabComptes[flag] = sld;
+    		}
  	}
  	if(chx == 3){
  		var pf = prompt("---Paiement de facture---\nChoix du service\n1.Senelec\n2.Sen'Eau\n3.Sonatel");
