@@ -1,4 +1,6 @@
-var cpt, sld, flag;
+var cpt, sld;
+
+var flag = -1;
 
 var tabNumeros = ["771234567", "761234567", "701234567", "781234567", "777654321"];
 
@@ -76,9 +78,13 @@ var id = tabNumeros.indexOf(val);
 	    		 	}	
 	    		 }
 	    		 if(flag != -1){
-	    		 		sld = tabComptes[flag] + senv;
-	    		alert('Votre transfert a bien été envoyé.\nAu revoir, cher(e) client!');
+	    		 	var senV = tabComptes[idx] - cpt;
+	    		 		sld = tabComptes[flag] + senV;
+	    		alert('Votre transfert a bien été envoyé.\nA Bientôt, cher(e) client!');
     		
+	    		 	}
+	    		 	else{
+	    		 		alert('Votre numéro n\'est pas pris en compte!\nA Bientôt...');
 	    		 	}
 	    		 
     		}
