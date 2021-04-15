@@ -64,26 +64,37 @@ var id = tabNumeros.indexOf(val);
  		if(!isNaN(env)){
  			var senv = prompt("Le montant à envoyé");
  		}
- 		if(!isNaN(senv)){
- 			var numE = document.getElementById('num').value;
-    		transfert(numE, env);
- 		}
- 		function transfert(numE, env){
+
 	    		var idx = select.selectedIndex;
+
+ 		function transfert(env, senv){
 	    		 cpt = tabComptes[idx] - senv;
 
 	    		 for(var i=0; i<tabNumeros.length; i++){
 	    		 	if(env === tabNumeros[i]){
 	    		 		flag = i;
-	    		 		sld = tabComptes[flag] + senv;alert(sld);
+	    		 	}	
+	    		 }
+	    		 if(flag != -1){
+	    		 		sld = tabComptes[flag] + senv;
 	    		alert('Votre transfert a bien été envoyé.\nAu revoir, cher(e) client!');
     		
 	    		 	}
-	    		 }
 	    		 
+    		}
+
+ 		if(senv < tabComptes[idx]){
+ 			if(!isNaN(senv)){
+ 			var numE = document.getElementById('num').value;
+    		transfert(env, senv);
+ 			}
+
 	tabComptes[idx] = cpt;
  	tabComptes[flag] = sld;
-    		}
+ }
+ else{
+ 	alert('Votre compte est insuffisant pour cette opération!\nA Bientôt ... ');
+ }
  	}
  	if(chx == 3){
  		var pf = prompt("---Paiement de facture---\nChoix du service\n1.Senelec\n2.Sen'Eau\n3.Sonatel");
