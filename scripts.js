@@ -61,6 +61,7 @@ var id = tabNumeros.indexOf(val);
  	if(chx == 1){
  		afficherSolde();
  	}
+ 	
  	if(chx == 2){
  		var env = prompt("Saisissez le numéro du destinataire\n");
  		if(!isNaN(env)){
@@ -70,16 +71,19 @@ var id = tabNumeros.indexOf(val);
 	    		var idx = select.selectedIndex;
 
  		function transfert(env, senv){
-	    		 cpt = tabComptes[idx] - senv;
 
 	    		 for(var i=0; i<tabNumeros.length; i++){
 	    		 	if(env === tabNumeros[i]){
+	    		 		cpt = tabComptes[idx] - senv;
+	    		 		tabComptes[idx] = cpt;
 	    		 		flag = i;
 	    		 	}	
 	    		 }
 	    		 if(flag != -1){
 	    		 	var senV = tabComptes[idx] - cpt;
 	    		 		sld = tabComptes[flag] + senV;
+ 						tabComptes[flag] = sld;
+
 	    		alert('Votre transfert a bien été envoyé.\nA Bientôt, cher(e) client!');
     		
 	    		 	}
@@ -94,9 +98,6 @@ var id = tabNumeros.indexOf(val);
  			var numE = document.getElementById('num').value;
     		transfert(env, senv);
  			}
-
-	tabComptes[idx] = cpt;
- 	tabComptes[flag] = sld;
  }
  else{
  	alert('Votre compte est insuffisant pour cette opération!\nA Bientôt ... ');
