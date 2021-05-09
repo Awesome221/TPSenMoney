@@ -10,16 +10,15 @@
 	<body>
         <select id='lang' name="langue" onchange="English()">
             <option value="fr">Fr</option>
-            <option value="en">En</option>
+            <option value="en" selected>En</option>
             <option value="wo">Wo</option>
         </select>
 		<h2>Sen Money</h2>
-
         <div id='compt'>
-        	<h5>Authentification</h5>
+        	<h5>Login</h5>
 
         
-        	<label for='num' class="float">Choix du numéro</label>
+        	<label for='num' class="float">Choosing number</label>
         	<select id='num' name="num" onchange="">
         		<option value="771234567">771234567</option>
         		<option value="761234567">761234567</option>
@@ -27,13 +26,14 @@
         		<option value="781234567">781234567</option>
         		<option value="777654321">777654321</option>
         	</select><br>
-        	<label for='code' class="float">Entrez votre code</label><input type="tel" name="code" id='code' pattern="\d+\d+\d+\d" required>
+        	<label for='code' class="float">Enter your code</label><input type="tel" name="code" id='code' pattern="\d+\d+\d+\d" required>
         	<span id = "codeIncorrect"></span><br>
-        	<input type="button" value="Envoyer" id="bouton_envoi" onclick="getValue()">
+        	<input type="button" value="Send" id="bouton_envoi" onclick="getValue()">
+       
         </div>
 <br><br>
         <div id='bton'>
-            <button onclick="MoneybilMoney()">#221#</button>
+            <button onclick="mobilMoney()">#221#</button>
         </div>
 
         <div class="footerbas">
