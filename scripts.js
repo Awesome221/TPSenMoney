@@ -1,20 +1,3 @@
-var slt = document.getElementById('lang');
-var lng = slt.selectedIndex;
-var lgp = slt.options[lng].value;
-var lg = slt.options[lng].innerHTML;
-
-function Langues() {
-	var xhttp= new XMLHttpRequest();
-	xhttp.onreadystatechange = function(){
-		if(this.readyState == 4 && this.status == 200){
-			document.body.innerHTML = this.responseText;
-		}
-	};
-
-		xhttp.open("GET", "donnees_en.txt", true);
-		xhttp.send();
-}
-
 var cpt, sld;
 
 var flag = -1;
