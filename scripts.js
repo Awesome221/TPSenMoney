@@ -11,18 +11,8 @@ function Langues() {
 		}
 	};
 
-     if(lgp == 'en'){
 		xhttp.open("GET", "donnees_en.txt", true);
 		xhttp.send();
-		}
-	if(lgp == 'fr'){
-		xhttp.open("GET", "donnees_fr.txt", true);
-		xhttp.send();
-		}
-	if(lgp == 'wo'){
-		xhttp.open("GET", "donnees_wo.txt", true);
-		xhttp.send();
-		}
 }
 
 var cpt, sld;
