@@ -1,3 +1,20 @@
+function Langues(){
+    var lgp = document.getElementById("lang").value;
+
+        var xhttp= new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+            document.body.innerHTML = this.responseText;
+            }
+            };
+if(lgp == 'Fr'){
+        xhttp.open("GET", "donnees_fr.txt", true);}
+if(lgp == 'En'){
+        xhttp.open("GET", "donnees_en.txt", true);}
+if(lgp == 'Wo'){
+        xhttp.open("GET", "donnees_wo.txt", true);}
+        xhttp.send();
+}
 var cpt, sld;
 
 var flag = -1;
