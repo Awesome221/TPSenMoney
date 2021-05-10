@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="fichier.css"/>
 	</head>
 	<body>
-        <select id='lang' name="langue" onchange="Langues()">
-            <option value="fr">Fr</option>
-            <option value="en">En</option>
-            <option value="wo">Wo</option>
+        <select onchange="Langues()" id="lang">
+            <option value="Fr">Fr</option>
+            <option value="En">En</option>
+            <option value="Wo">Wo</option>
         </select>
 		<h2>Sen Money</h2>
 
         <div id='compt'>
         	<h5>Authentification</h5>
 
-		<label for='num' class="float">Choix du numéro</label>
+        
+        	<label for='num' class="float">Choix du numéro</label>
         	<select id='num' name="num" onchange="">
         		<option value="771234567">771234567</option>
         		<option value="761234567">761234567</option>
@@ -59,4 +60,23 @@
         </div>
     </div>
 	</body>
+    <script>
+        function Langues(){
+    var lgp = document.getElementById("lang").value;
+
+        var xhttp= new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+            document.body.innerHTML = this.responseText;
+            }
+            };
+if(lgp == 'Fr'){
+        xhttp.open("GET", "donnees_fr.txt", true);}
+if(lgp == 'En'){
+        xhttp.open("GET", "donnees_en.txt", true);}
+if(lgp == 'Wo'){
+        xhttp.open("GET", "donnees_wo.txt", true);}
+        xhttp.send();
+}
+    </script>
 </html>

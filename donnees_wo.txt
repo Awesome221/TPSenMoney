@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="fichier.css"/>
 	</head>
 	<body>
-        <select id='lang' name="langue" onchange="Langues()">
-            <option value="fr">Fr</option>
-            <option value="en">En</option>
-            <option value="wo" selected>Wo</option>
+        <select id='lang' onchange="Langues() ">
+            <option value="Fr">Fr</option>
+            <option value="En">En</option>
+            <option value="Wo" selected>Wo</option>
         </select>
 		<h2>Sen Money</h2>
         <div id='compt'>
@@ -51,7 +51,7 @@
 
                             <div class="content">
                                 <p>
-                                    <a href="#" target="_blank">Réalisé par Aliou Dadal KA et Clesio Bampoki</a>
+                                    <a href="#" target="_blank">Réalisé par Aliou Dadal KA, Clesio Bampoki  et Alioune Khaly BA</a>
                                 </p>
                             </div>
                         </div>
@@ -61,4 +61,6 @@
         </div>
     </div>
 	</body>
+    <script>
+    </script>
 </html>
