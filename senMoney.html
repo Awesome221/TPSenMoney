@@ -8,18 +8,17 @@
     <link rel="stylesheet" href="fichier.css"/>
 	</head>
 	<body>
-		<select id='lang' name="langue" onchange="Langues()">
-			<option value="fr">Fr</option>
-			<option value="en">En</option>
-			<option value="wo">Wo</option>
-		</select>
+        <select id='lang' name="langue" onchange="Langues()">
+            <option value="fr">Fr</option>
+            <option value="en">En</option>
+            <option value="wo">Wo</option>
+        </select>
 		<h2>Sen Money</h2>
 
         <div id='compt'>
         	<h5>Authentification</h5>
 
-        
-        	<label for='num' class="float">Choisissez votre numéro</label>
+		<label for='num' class="float">Choix du numéro</label>
         	<select id='num' name="num" onchange="">
         		<option value="771234567">771234567</option>
         		<option value="761234567">761234567</option>
@@ -30,13 +29,11 @@
         	<label for='code' class="float">Entrez votre code</label><input type="tel" name="code" id='code' pattern="\d+\d+\d+\d" required>
         	<span id = "codeIncorrect"></span><br>
         	<input type="button" value="Envoyer" id="bouton_envoi" onclick="getValue()">
-       
         </div>
 <br><br>
         <div id='bton'>
             <button onclick="mobilMoney()">#221#</button>
         </div>
-
         <div class="footerbas">
         <div class="container">
             <div class="row clearfix">
@@ -52,7 +49,7 @@
 
                             <div class="content">
                                 <p>
-                                    <a href="#" target="_blank">Réalisé par Aliou Dadal KA et Clesio Bampoki</a>
+                                    <a href="#" target="_blank">Réalisé par Aliou Dadal KA et Clesio Bampoki</a>    
                                 </p>
                             </div>
                         </div>
