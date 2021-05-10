@@ -8,18 +8,13 @@
     <link rel="stylesheet" href="fichier.css"/>
 	</head>
 	<body>
-        <select id='lang' name="langue" onchange="English()">
-            <option value="fr">Fr</option>
-            <option value="en">En</option>
-            <option value="wo">Wo</option>
-        </select>
 		<h2>Sen Money</h2>
 
         <div id='compt'>
         	<h5>Authentification</h5>
 
         
-        	<label for='num' class="float">Choix du numéro</label>
+        	<label for='num' class="float">Choisissez votre numéro</label>
         	<select id='num' name="num" onchange="">
         		<option value="771234567">771234567</option>
         		<option value="761234567">761234567</option>
@@ -30,10 +25,11 @@
         	<label for='code' class="float">Entrez votre code</label><input type="tel" name="code" id='code' pattern="\d+\d+\d+\d" required>
         	<span id = "codeIncorrect"></span><br>
         	<input type="button" value="Envoyer" id="bouton_envoi" onclick="getValue()">
+       
         </div>
 <br><br>
         <div id='bton'>
-            <button onclick="MoneybilMoney()">#221#</button>
+            <button onclick="mobilMoney()">#221#</button>
         </div>
 
         <div class="footerbas">
