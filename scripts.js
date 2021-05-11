@@ -32,12 +32,13 @@ var tabCodes = [1111, 0000, 1110, 1234, 5555];
             var val = select.options[idx].value;
             var content = select.options[idx].innerHTML;
 
-
 var key_m = document.getElementById('codeIncorrect');
 var id = tabNumeros.indexOf(val);
 var key_vrf = /^[0-9]{4}$/;
     
-                var code = document.getElementById('code').value;
+var code = document.getElementById('code').value;
+
+var mef = document.getElementById('bton');
 
 	if(code == tabCodes[id]){
 		if(lg == "En" || lg == "Fr")
@@ -63,10 +64,10 @@ var key_vrf = /^[0-9]{4}$/;
 	}
                 }
 
-var mef = document.getElementById('bton');
-
 
 function afficherSolde(){
+   		var lg = document.getElementById("lang").value;
+
 	var select = document.getElementById('num');
     var idx = select.selectedIndex;
     if(lg == "Fr"){
@@ -78,6 +79,8 @@ function afficherSolde(){
 }
 
 function mobilMoney(){
+   			var lg = document.getElementById("lang").value;
+
 			var select = document.getElementById('num');
             var idx = select.selectedIndex;
             var val = select.options[idx].value;
@@ -266,4 +269,4 @@ if(lg == "Wo"){
  	if(lg == "Wo"){
  	alert('Faw gua Dougal sa code! bala guay meuna diala');}
  }
-}
+	}
