@@ -51,7 +51,7 @@
 
                             <div class="content">
                                 <p>
-                                    <a href="#" target="_blank">Réalisé par Aliou Dadal KA, Clesio Bampoki  et Alioune Khaly BA</a>
+                                    <a href="#" target="_blank">Réalisé par Aliou Dadal KA</a>
                                 </p>
                             </div>
                         </div>
